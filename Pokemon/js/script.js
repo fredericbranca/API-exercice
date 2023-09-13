@@ -70,6 +70,7 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=" + nbPokemons)
             console.log(bgColor);
             if (bgColor) {
                 pokemonDiv.style.backgroundColor = bgColor;
+                pokemonDiv.style.border = "1px solid " + bgColor;
             }
 
             // On combine le tout et l'ajoute à la div
@@ -79,8 +80,6 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=" + nbPokemons)
             let img = document.createElement("img"); // création balise img
             img.src = pokemonInfos.sprites.front_default; // >sprites>font_default contient le lien de l'image qu'on recherche
             pokemonDiv.appendChild(img);
-
-
         })
     });
     
