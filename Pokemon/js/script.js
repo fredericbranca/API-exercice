@@ -79,6 +79,7 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=" + nbPokemons)
             // Récupère l'image du pokemon et on l'ajoute à la div pokemon
             let img = document.createElement("img"); // création balise img
             img.src = pokemonInfos.sprites.front_default; // >sprites>font_default contient le lien de l'image qu'on recherche
+            img.alt = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
             pokemonDiv.appendChild(img);
         })
     });
